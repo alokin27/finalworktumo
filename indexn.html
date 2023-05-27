@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<p>Grass Count: <span id="grassCount">0</span></p>
+<p>Grass Eater Count: <span id="grassEaterCount">0</span></p>
+<p>Hunter Count: <span id="hunterCount">0</span></p>
+<p>Killer Count: <span id="killerCount">0</span></p>
+<p>Alien Count: <span id="alienCount">0</span></p>
+<p>Bomb Count: <span id="bombCount">0</span></p>
+
+
+  <style>
+    .paused {
+      background-color: red;
+    }
+    
+    .running {
+      background-color: green;
+    }
+
+  </style>
+  
+</head>
+
+<body>
+  
+  
+  
+  
+  
+  
+  <meta charset="UTF-8">
+  
+  <h1>Nikola Game of life</h1>
+  <button onclick="setup()">Reset</button>
+
+  <button onclick="sezonii()">Season</button>
+
+  <button onclick="Illnes_conditons()">Illnes</button>
+  <button onclick="bomb_conditions()">Bomb</button>
+  <button onclick="ndalo();">Stop</button>
+  
+ 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+  <script src="nikolaclass.js"></script>  
+  <script src="nikolascript.js"></script>
+
+  
+  
+  
+  <style>
+    p{
+
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    main {
+      margin: 5vh 15%;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 400;
+      text-align: center;
+    }
+    img {
+      width: 50%;
+      height: auto;
+    }
+    p {
+      text-align: justify;
+      font-size: 18px;
+    }
+    label {
+      position: absolute;
+      width: 45px;
+      height: 22px;
+      right: 20px;
+      top: 20px;
+      border: 2px solid;
+      border-radius: 20px;
+    }
+    label:before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      left: 1px;
+      top: 1px;
+      border-radius: 50%;
+      background: #000;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    label.active:before {
+      left: 24px;
+      background: #fff;
+    }
+    body.night {
+      background: #000;
+      color: #fff;
+    }
+    @media screen and (min-width:900px) {
+      .respon {
+        display: flex;
+      }
+      img {
+        height: 50%;
+        width: auto;
+        padding-top: 3vh;
+        padding-right: 5%;
+      }
+      p {
+        max-width: 80%;
+        line-height: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <label id="dark-change"></label>
+  </header>
+  <main>
+  </main>
+  <script>
+    var content = document.getElementsByTagName('body')[0];
+    var darkMode = document.getElementById('dark-change');
+    darkMode.addEventListener('click', function(){
+        darkMode.classList.toggle('active');
+        content.classList.toggle('night');
+    })
+  </script>
+  
+  
+  
+</body>
+</html>
